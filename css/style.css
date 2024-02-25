@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "IRANSansWeb(FaNum)";
+}
+
+html {
+    font-size: 68.4%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 900px;
+    margin-top: 70px;
+}
+
+.tapsel-logo img {
+    width: 150px;
+    float: left;
+}
+
+.products-box {
+    border-radius: 10px;
+    background-color: #ececec;
+    border: 1px solid #ccc;
+}
+
+/* products-box header */
+.products-box__header {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 15px;
+}
+
+.digikala-logo {
+    margin-left: 15px;
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 8px 32px 8px 0;
+    background: linear-gradient(48deg, rgba(248, 155, 41, 1) 0%, rgba(255, 15, 123, 1) 100%);
+    color: #fff;
+    border-radius: 8px;
+}
+.banner img {
+    width: 30px;
+    height: 30px;
+}
+
+.banner h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-right: 8px;
+}
+
+/* products item */
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+.products-item {
+    position: relative;
+}
+
+.products-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+.products-item__text {
+    display: none;
+}
+
+.products-item__details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(82deg, rgba(237, 237, 237, 0.5) 0%, rgba(224, 224, 224, 0.7) 100%);
+    backdrop-filter: blur(0.3rem);
+    padding: 8px 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.discount-tag {
+    border: 1px solid red;
+    color: red;
+    padding: 4px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+}
+
+.price {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #8a8989;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 669px) {
+    .products-box {
+        padding: 0 10px 10px;
+    }
+
+    .products {
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        grid-auto-flow: column;
+        margin-bottom: 10px;
+        margin: 0;
+    }
+
+    .products-item {
+        width: 230px;
+        height: 350px;
+        background-color: #fff;
+        border-radius: 12px;
+    }
+
+    .products-item img {
+        height: 250px;
+    }
+
+    .products-item__text {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin: 5px 10px;
+    }
+
+    /* banner */
+    .products-box__header {
+        margin: 15px 0;
+    }
+
+    .banner {
+        padding-right: 20px;
+    }
+
+    .banner img {
+        width: 23px;
+        height: 23px;
+    }
+
+    .banner h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+}
